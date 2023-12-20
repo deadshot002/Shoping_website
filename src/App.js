@@ -6,9 +6,15 @@ import SectionB from './SectionB';
 import Team from './Team';
 import Footer from './Footer';
 import Header from './Header';
-import { useSyncExternalStore } from 'react';
+// import { useSyncExternalStore } from 'react';
 import Shope1 from './Shope1';
 import Shope2 from './Shope2';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
 // import Product from './card';
 function App() {
   const [mode, setMode] = useState({ backgroundColor: "white", color: "black" })
@@ -23,42 +29,58 @@ function App() {
     }
   }
 
-  const [Hide, setHide] = useState({ display: 'block', });
-  const [Visible, setVisible] = useState({ display: 'none' });
-  const [card, setcard] = useState({display: 'none'});
-  const Shope = () => {
-    setHide({display: "none",});
-    setVisible({display: "block",});
-  };
-  const Home = () => {
-    setHide({display: "block",});
-    setVisible({display: "none",});
-    setcard({display: "none",});
-  };
-  const Show = () => {
-    setVisible({display: "none",});
-    setcard({display: "block",});
-  };
-  const ArRow = () => {
-    setVisible({display: "block",});
-    setcard({display: "none",});
-  };
+  // const [Hide, setHide] = useState({ display: 'block', });
+  // const [Visible, setVisible] = useState({ display: 'none' });
+  // const [card, setcard] = useState({ display: 'none' });
+  // const Shope = () => {
+  //   setHide({ display: "none", });
+  //   setVisible({ display: "block", });
+  // };
+  // const Home = () => {
+  //   setHide({ display: "block", });
+  //   setVisible({ display: "none", });
+  //   setcard({ display: "none", });
+  // };
+  // const Show = () => {
+  //   setVisible({ display: "none", });
+  //   setcard({ display: "block", });
+  // };
+  // const ArRow = () => {
+  //   setVisible({ display: "block", });
+  //   setcard({ display: "none", });
+  // };
 
 
   return (
-    <div>
-      <Header mode={mode} ToggleEvent={ToggleEvent} Home={Home} Shope={Shope} />
+      <Router>
+      <Header mode={mode} ToggleEvent={ToggleEvent} />
       {/* home */}
-      <SectionA mode={mode} Hide={Hide} />
-      <SectionB mode={mode} Hide={Hide} />
-      <Team mode={mode} Hide={Hide} />
+
+
+      <Switch>
+        <Route exact path="/Shop">
+          <Shope1 mode={mode}/>
+          <Shope2 mode={mode} />
+        </Route>
+        <Route exact path="/Home">
+          <SectionA mode={mode} />
+          <SectionB mode={mode} />
+          <Team mode={mode}  />
+        </Route>
+      </Switch>
+
+          
+      {/* <Route path='/' element={<Shope1 mode={mode} Visible={Visible} Show={Show} />+<Shope2 mode={mode} card={card} ArRow={ArRow} />} />
+      <Route path='/Shop' element={<SectionA mode={mode} Hide={Hide} />+<SectionB mode={mode} Hide={Hide} />+<Team mode={mode} Hide={Hide} />} /> */}
+
+
+
       {/* Shope */}
-      <Shope1 mode={mode} Visible={Visible} Show={Show} />
-      <Shope2 mode={mode} card={card} ArRow={ArRow} />
+
       {/* <Product/> */}
       <Footer mode={mode} />
 
-    </div>
+    </Router>
   );
 }
 

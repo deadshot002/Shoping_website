@@ -1,60 +1,60 @@
 import React from 'react'
 
-const card1 = {
-  name: "The Catalyzer",
-  price: 16.01
-};
-const card2 = {
-  name: "Shooting Stars",
-  price: 21.15
-};
-const card3 = {
-  name: "Neptune",
-  price: 12.03
-};
-const card4 = {
-  name: "The 400 Blows",
-  price: 18.40
-};
-const card5 = {
-  name: "The Catalyzer 2",
-  price: 16.01
-};
-const card6 = {
-  name: "Shooting Stars 2",
-  price: 21.15
-};
-const card7 = {
-  name: "Neptune 2",
-  price: 12.03
-};
-const card8 = {
-  name: "The 400 Blows 2",
-  price: 18.40
-};
+// const card1 = {
+//   name: "The Catalyzer",
+//   price: 16.01
+// };
+// const card2 = {
+//   name: "Shooting Stars",
+//   price: 21.15
+// };
+// const card3 = {
+//   name: "Neptune",
+//   price: 12.03
+// };
+// const card4 = {
+//   name: "The 400 Blows",
+//   price: 18.40
+// };
+// const card5 = {
+//   name: "The Catalyzer 2",
+//   price: 16.01
+// };
+// const card6 = {
+//   name: "Shooting Stars 2",
+//   price: 21.15
+// };
+// const card7 = {
+//   name: "Neptune 2",
+//   price: 12.03
+// };
+// const card8 = {
+//   name: "The 400 Blows 2",
+//   price: 18.40
+// };
 
-const data=[
-  {
-    name: "The Catalyzer",
-    price: 16.01
-  },
-  {
-    name: "Shooting Stars",
-    price: 21.15
-  },
+// const data=[
+//   {
+//     name: "The Catalyzer",
+//     price: 16.01
+//   },
+//   {
+//     name: "Shooting Stars",
+//     price: 21.15
+//   },
 
-]
+// ]
 // if (props.name === card1) {
 //   console.log('card1');
 // }
 
 export default function Shope2(props) {
   return (
-    <div style={props.card}>
+    <div>
       <section className="text-gray-600 body-font overflow-hidden" style={props.mode}>
         <div className='container px-5 mx-auto'>
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-            <path className='cursor-pointer' onClick={props.ArRow} d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+            <path className='cursor-pointer' d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
           </svg>
         </div>
         <div className="container px-5 py-24 mx-auto">

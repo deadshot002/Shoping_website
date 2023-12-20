@@ -2,7 +2,7 @@ import React from 'react'
 
 function SectionB(props) {
   return (
-    <div style={props.Hide}>
+    <div>
       <section className="text-gray-600 body-font" style={props.mode}>
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">

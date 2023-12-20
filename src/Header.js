@@ -1,5 +1,6 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
 
 export default function Header(props) {
     
@@ -8,8 +9,8 @@ export default function Header(props) {
         <header className="text-gray-600 body-font" style={props.mode}>
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                 <nav className="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
-                    <a onClick={props.Home} className="cursor-pointer mr-5 hover:text-gray-500">Home</a>
-                    <a onClick={props.Shope} className="cursor-pointer mr-5 hover:text-gray-500">Shope</a>
+                    <Link to='/Home' className="cursor-pointer mr-5 hover:text-gray-500">Home</Link>
+                    <Link to='/Shop' className="cursor-pointer mr-5 hover:text-gray-500">Shop</Link>
                     <button onClick={props.ToggleEvent}>dark mode</button>
                 </nav>
                 <div className="border-2 border-gray-200 rounded flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0" >
